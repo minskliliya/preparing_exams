@@ -1,0 +1,65 @@
+<!DOCUMENT html>
+<html>
+  <head>
+    <title>DOM examples </title>
+    <meta />
+    <script>
+      window.onload = function() {
+        var element = document.getElementById("outerDiv");
+        console.log(element.innerText);
+        var paragraph = document.getElementsByTagName("p");
+        console.log(paragraph.length);
+        var paragraph_selector_all = document.querySelectorAll("p");
+        console.log(paragraph_selector_all);
+        var paragraph_selector = document.querySelector("#outerDiv"); 
+        console.log(paragraph_selector);        
+      }
+    </script>
+  </head>
+  <body>
+    <div id="outerDiv">
+      <p class="mainPara">Main paragraph</p>
+      <ul>
+        <li>First List Item</li>
+        <li>Second List Item</li>
+        <li>Third List Item</li>
+        <li>Fourth List Item</li>
+      </ul>
+      <div id="innerDiv">
+        <p class="mainPara" id="P1">Paragraph 1</p>
+        <p class="mainPara" id="P2">Paragraph 2</p>
+        <p class="mainPara" id="P3">Paragraph 3</p>
+        <p class="mainPara" id="P4">Paragraph 4</p>
+      </div>
+      <table>
+        <tr>
+          <td>
+            Row 1 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Row 2 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Row 3 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Row 4 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Row 5 
+          </td>
+        </tr>         
+      </table>
+      <input type="text" />
+      <input type="submit" value="Submit" />
+    </div>
+  </body>
+</html>
