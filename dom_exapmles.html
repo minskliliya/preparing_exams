@@ -18,17 +18,27 @@
         // element.removeChild(element_remove);
         // var afterRemove = document.getElementById("innerDiv");        
         // console.log(afterRemove);
+        // var outerDiv = document.getElementById("outerDiv");
+        // var articleElement = document.createElement("article");
+        // articleElement.innerText = "My new <article> element";
+        // outerDiv.appendChild(articleElement);
+        // var outerDivBefore = document.getElementById("outerDiv").insertBefore(
+        //   document.createElement("article"),
+        //   document.getElementById("innerDiv"));
+        // outerDivBefore.innerText = "My new <article> element before insert";  
+        // var inner = document.getElementById("innerDiv");
+        // var newArticle = inner.insertBefore(document.createElement("article"),inner.firstChild);
+        // newArticle.innerText = "My new <article> element firstChild";
         var outerDiv = document.getElementById("outerDiv");
-        var articleElement = document.createElement("article");
-        articleElement.innerText = "My new <article> element";
-        outerDiv.appendChild(articleElement);
-        var outerDivBefore = document.getElementById("outerDiv").insertBefore(
-          document.createElement("article"),
-          document.getElementById("innerDiv"));
-        outerDivBefore.innerText = "My new <article> element before insert";  
-        var inner = document.getElementById("innerDiv");
-        var newArticle = inner.insertBefore(document.createElement("article"),inner.firstChild);
-        newArticle.innerText = "My new <article> element firstChild";
+        var oldDiv = document.getElementById("innerDiv");
+        var newDiv = document.createElement("div");
+        for(var i = 0; i < innerDiv.childNodes.length; i++) {
+          var anchor = newDiv.appendChild(document.createElement("a"));
+          anchor.setAttribute("href", "http://www.bing.ca");
+          anchor.text = innerDiv.childNodes[i].textContent;
+          newDiv.appendChild(document.createElement("br"));
+        }
+        outerDiv.replaceChild(newDiv,oldDiv);
       }
     </script>
   </head>
